@@ -7,8 +7,8 @@ import { products } from '../products';
 })
 export class ProductService {
 
-  shoppingCart: IProduct[];
-  products: IProduct[];
+  shoppingCart: IProduct[] = [];
+  products: IProduct[] = [];
 
   constructor() {
     this.products = products;
@@ -19,7 +19,7 @@ export class ProductService {
    }
 
    getShoppingCart(): IProduct[] {
-     return this.products;
+     return this.shoppingCart;
    }
 
    addToCart(product: IProduct): void {
